@@ -9,6 +9,7 @@ source as (
 renamed as (
 
     select
+        GENERATE_UUID() AS notification_id,
         reason,
         channel,
         status,

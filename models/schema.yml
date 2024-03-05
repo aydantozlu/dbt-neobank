@@ -15,7 +15,7 @@ sources:
       - name : notifications
         identifier: notifications
         columns:
-          - name: user_id
+          - name: notification_id
             description: primary key of the table
             tests:
               - unique

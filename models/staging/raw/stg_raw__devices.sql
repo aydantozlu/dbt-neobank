@@ -13,6 +13,7 @@ renamed as (
         string_field_1 AS user_id,
 
     from source
+    WHERE NOT (string_field_0 = 'brand' AND string_field_1 = 'user_id')
 
 )
 
