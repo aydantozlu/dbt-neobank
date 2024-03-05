@@ -6,9 +6,33 @@ sources:
     tables:
       - name : devices
         identifier: devices
+        columns:
+          - name: user_id
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
       - name : notifications
         identifier: notifications
+        columns:
+          - name: user_id
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
       - name : transactions
         identifier: transactions
+        columns:
+          - name: transaction_id
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
       - name : users
         identifier: users
+        columns:
+          - name: user_id
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
