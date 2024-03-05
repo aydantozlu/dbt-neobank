@@ -14,10 +14,7 @@ renamed as (
         transactions_currency,
         amount_usd,
         transactions_state,
-        ea_cardholderpresence,
-        ea_merchant_mcc,
-        ea_merchant_city,
-        ea_merchant_country,
+        COALESCE(ea_merchant_country, 'None') AS ea_merchant_country,
         direction,
         user_id,
         created_date

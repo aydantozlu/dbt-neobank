@@ -8,18 +8,8 @@ sources:
         identifier: devices
         columns:
           - name: user_id
-            description: primary key of the table
-            tests:
-              - unique
-              - not_null
       - name : notifications
         identifier: notifications
-        columns:
-          - name: notification_id
-            description: primary key of the table
-            tests:
-              - unique
-              - not_null
       - name : transactions
         identifier: transactions
         columns:

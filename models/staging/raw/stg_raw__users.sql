@@ -12,15 +12,12 @@ renamed as (
         user_id,
         birth_year,
         country,
-        city,
         created_date,
         user_settings_crypto_unlocked,
         plan,
-        attributes_notifications_marketing_push,
-        attributes_notifications_marketing_email,
-        num_contacts,
-        num_referrals,
-        num_successful_referrals
+        COALESCE(attributes_notifications_marketing_push, 0) AS attributes_notifications_marketing_push,
+        COALESCE(attributes_notifications_marketing_email, 0) AS attributes_notifications_marketing_email,
+        num_contacts
 
     from source
 
