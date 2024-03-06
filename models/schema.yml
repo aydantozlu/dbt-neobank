@@ -26,3 +26,11 @@ sources:
             tests:
               - unique
               - not_null
+      - name : mcc_description
+        identifier: mcc_description
+        columns:
+          - name: ea_merchant_mcc
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
