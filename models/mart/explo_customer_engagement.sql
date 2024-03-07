@@ -14,6 +14,7 @@ SUM(amount_usd) AS amount_transactions,
 CASE
     WHEN DATE_DIFF(DATE('2019-05-16'), DATE(MAX(created_date)), DAY) > 134 THEN 1
     ELSE 0
-  END AS churner
+  END AS churner,
+tranche_age
 FROM {{ ref('int_transac_device_user') }}
-GROUP BY user_id
+GROUP BY user_id, tranche_age
