@@ -1,5 +1,6 @@
 SELECT i.*,
 CONCAT(CAST(EXTRACT(YEAR FROM (i.user_created_date)) AS STRING), ' Q', CAST(EXTRACT(QUARTER FROM (i.user_created_date)) AS STRING)) AS cohort,
+DATE_DIFF(DATE(created_date), DATE(i.user_created_date), QUARTER) AS nb_quarter,
 c.churner,
 sc.score_f,
 sc.score_r,
